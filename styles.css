@@ -357,6 +357,13 @@ h2 {
 .contact__infos a { text-decoration: none; }
 .contact__infos a:hover { color: var(--primary); }
 
+.contact__photo { margin-top: 2rem; }
+.contact__photo img {
+  width: 100%; max-width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover;
+  border-radius: 18px; border: 1px solid var(--line);
+  box-shadow: 0 12px 40px rgba(0,0,0,.45);
+}
+
 .contact__form {
   background: var(--bg); border: 1px solid var(--line); border-radius: 20px;
   padding: clamp(1.25rem, 4vw, 2.5rem); display: grid; gap: 1.2rem;
