@@ -449,6 +449,8 @@ h2 {
   .bolt--3 { display: none; }
   .hero__inner { grid-template-columns: 1fr; }
   .hero { padding-top: 6rem; }
+  .work__visual { aspect-ratio: 16 / 9; }
+  .work__visual span { font-size: 2.4rem; }
 }
 
 /* ============ REDUCED MOTION ============ */
