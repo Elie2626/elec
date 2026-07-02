@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FULGUR Élec — Électricien à Lyon | Électricité générale & BTP</title>
+<meta name="description" content="FULGUR Élec, votre électricien à Lyon : électricité générale, tertiaire et industrielle. Installation, dépannage 24/7, mise aux normes sur Lyon et sa métropole. Devis gratuit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Passer au contenu principal</a>
+
+<!-- Canvas étincelles plein écran -->
+<canvas id="sparks" aria-hidden="true"></canvas>
+
+<header class="nav" id="top">
+  <a href="#top" class="nav__logo" aria-label="FULGUR Élec — accueil">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="logo-bolt">
+      <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="currentColor"/>
+    </svg>
+    FULGUR<span>ÉLEC</span>
+  </a>
+  <nav aria-label="Navigation principale" class="nav__links" id="navlinks">
+    <a href="#services">Services</a>
+    <a href="#chiffres">L'entreprise</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#contact" class="nav__cta">Devis gratuit</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navlinks">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <!-- Éclairs SVG animés -->
+  <svg class="bolt bolt--1" viewBox="0 0 200 600" aria-hidden="true" preserveAspectRatio="none">
+    <path class="bolt-path" d="M120 0 L80 180 L130 190 L60 380 L110 390 L40 600" />
+  </svg>
+  <svg class="bolt bolt--2" viewBox="0 0 200 600" aria-hidden="true" preserveAspectRatio="none">
+    <path class="bolt-path" d="M60 0 L110 160 L70 175 L140 360 L95 375 L160 600" />
+  </svg>
+  <svg class="bolt bolt--3" viewBox="0 0 200 600" aria-hidden="true" preserveAspectRatio="none">
+    <path class="bolt-path" d="M100 0 L70 220 L125 230 L85 430 L135 440 L90 600" />
+  </svg>
+  <div class="hero__flash" aria-hidden="true"></div>
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <div class="hero__inner">
+  <div class="hero__content">
+    <p class="hero__kicker reveal"><span class="live-dot" aria-hidden="true"></span> Électricien à Lyon — Urgence 24h/24, 7j/7</p>
+    <h1 class="hero__title">
+      <span class="reveal r1">L'ÉNERGIE</span>
+      <span class="reveal r2 stroke">SOUS</span>
+      <span class="reveal r3 volt">CONTRÔLE<svg class="title-bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="currentColor"/></svg></span>
+    </h1>
+    <p class="hero__sub reveal r4">Électricité générale, tertiaire &amp; industrielle sur Lyon et sa métropole. Installation, rénovation, mise aux normes NF C 15-100 — intervention rapide dans tous les arrondissements.</p>
+    <div class="hero__actions reveal r5">
+      <a href="#contact" class="btn btn--primary">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="currentColor"/></svg>
+        Demander un devis
+      </a>
+      <a href="tel:+33658428199" class="btn btn--ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        06 58 42 81 99
+      </a>
+    </div>
+  </div>
+
+  <div class="hero__media reveal r4">
+    <div class="hero__media-frame">
+      <video src="video_web.mp4" poster="image_video.png" autoplay muted loop playsinline aria-label="Vidéo de présentation FULGUR Élec"></video>
+    </div>
+  </div>
+  </div>
+
+  <div class="hero__marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>⌁ HAUTE TENSION</span><span>⌁ INSTALLATION</span><span>⌁ DÉPANNAGE 24/7</span><span>⌁ MISE AUX NORMES</span><span>⌁ DOMOTIQUE</span><span>⌁ BORNES IRVE</span>
+      <span>⌁ HAUTE TENSION</span><span>⌁ INSTALLATION</span><span>⌁ DÉPANNAGE 24/7</span><span>⌁ MISE AUX NORMES</span><span>⌁ DOMOTIQUE</span><span>⌁ BORNES IRVE</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="section-head">
+    <p class="section-tag">// Nos services</p>
+    <h2>Ce qu'on branche <span class="accent">pour vous</span></h2>
+  </div>
+  <div class="services__grid">
+    <article class="card" style="--i:0">
+      <div class="card__zap" aria-hidden="true"></div>
+      <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></div>
+      <h3>Installation électrique</h3>
+      <p>Neuf ou rénovation complète : tableaux, câblage, prises, éclairage. Conformité NF C 15-100 garantie avec attestation Consuel.</p>
+    </article>
+    <article class="card" style="--i:1">
+      <div class="card__zap" aria-hidden="true"></div>
+      <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+      <h3>Dépannage 24/7</h3>
+      <p>Panne, court-circuit, disjoncteur qui saute ? Intervention en urgence, diagnostic transparent et réparation immédiate.</p>
+    </article>
+    <article class="card" style="--i:2">
+      <div class="card__zap" aria-hidden="true"></div>
+      <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2 3 7v6c0 5 3.8 8.4 9 9 5.2-.6 9-4 9-9V7l-9-5z"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <h3>Mise aux normes</h3>
+      <p>Diagnostic sécurité, remplacement de tableau, mise à la terre. On sécurise votre installation de A à Z.</p>
+    </article>
+    <article class="card" style="--i:3">
+      <div class="card__zap" aria-hidden="true"></div>
+      <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+      <h3>Domotique &amp; smart home</h3>
+      <p>Éclairage connecté, volets, chauffage piloté, alarme. Votre maison vous obéit au doigt et à l'œil.</p>
+    </article>
+    <article class="card" style="--i:4">
+      <div class="card__zap" aria-hidden="true"></div>
+      <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 7h4M12 17h.01"/></svg></div>
+      <h3>Bornes de recharge IRVE</h3>
+      <p>Installation certifiée de bornes pour véhicules électriques, à domicile ou en entreprise. Éligible aux aides.</p>
+    </article>
+    <article class="card" style="--i:5">
+      <div class="card__zap" aria-hidden="true"></div>
+      <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 20h20M4 20V9l8-6 8 6v11M9 20v-6h6v6"/></svg></div>
+      <h3>Tertiaire &amp; industriel</h3>
+      <p>Bureaux, commerces, ateliers : courants forts et faibles, éclairage de sécurité, maintenance préventive.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CHIFFRES ============ -->
+<section class="stats" id="chiffres">
+  <div class="stats__wire" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path class="wire-path" d="M0 30 H300 l15 -20 15 40 15 -40 15 40 15 -20 H1200"/><circle class="wire-pulse" r="5"/></svg>
+  </div>
+  <div class="stats__grid">
+    <div class="stat"><span class="stat__num" data-count="15">0</span><span class="stat__label">ans d'expérience</span></div>
+    <div class="stat"><span class="stat__num" data-count="850">0</span><span class="stat__label">chantiers livrés</span></div>
+    <div class="stat"><span class="stat__num" data-count="24">0</span><span class="stat__label">h/24 disponibles</span></div>
+    <div class="stat"><span class="stat__num" data-count="100">0</span><span class="stat__label">% conformité Consuel</span></div>
+  </div>
+</section>
+
+<!-- ============ RÉALISATIONS ============ -->
+<section class="works" id="realisations">
+  <div class="section-head">
+    <p class="section-tag">// Réalisations</p>
+    <h2>Des chantiers qui ont <span class="accent">du courant</span></h2>
+  </div>
+  <div class="works__grid">
+    <article class="work" style="--i:0">
+      <div class="work__visual work__visual--a"><img src="img2.jpg" alt="Électricien câblant un tableau électrique résidentiel" width="800" height="600" loading="lazy"><span aria-hidden="true">01</span></div>
+      <h3>Rénovation complète — Maison 140 m²</h3>
+      <p>Tableau neuf, 42 points lumineux, domotique intégrée.</p>
+    </article>
+    <article class="work" style="--i:1">
+      <div class="work__visual work__visual--b"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=70" alt="Plateau de bureaux moderne avec éclairage LED" width="800" height="600" loading="lazy"><span aria-hidden="true">02</span></div>
+      <h3>Plateau de bureaux — 600 m²</h3>
+      <p>Courants forts/faibles, baie de brassage, éclairage LED dynamique.</p>
+    </article>
+    <article class="work" style="--i:2">
+      <div class="work__visual work__visual--c"><img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=70" alt="Voiture électrique branchée à une borne de recharge" width="800" height="600" loading="lazy"><span aria-hidden="true">03</span></div>
+      <h3>Parking résidentiel — 12 bornes IRVE</h3>
+      <p>Infrastructure collective, gestion de charge intelligente.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="contact__inner">
+    <div class="contact__text">
+      <p class="section-tag">// Contact</p>
+      <h2>Un projet ?<br><span class="accent">On met le jus.</span></h2>
+      <p class="contact__sub">Devis gratuit sous 48 h. Décrivez votre besoin, on s'occupe du reste.</p>
+      <ul class="contact__infos">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+33658428199">06 58 42 81 99</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:contact@fulgur-elec.fr">contact@fulgur-elec.fr</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Lyon &amp; métropole lyonnaise — 69</li>
+      </ul>
+      <div class="contact__photo">
+        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=70" alt="Électricien intervenant sur une installation en hauteur" width="800" height="560" loading="lazy">
+      </div>
+    </div>
+    <form class="contact__form" id="quoteForm" novalidate>
+      <div class="field">
+        <label for="f-name">Nom <span aria-hidden="true">*</span></label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+        <p class="field__error" id="err-name" hidden>Veuillez indiquer votre nom.</p>
+      </div>
+      <div class="field">
+        <label for="f-tel">Téléphone <span aria-hidden="true">*</span></label>
+        <input id="f-tel" name="tel" type="tel" autocomplete="tel" required>
+        <p class="field__error" id="err-tel" hidden>Veuillez indiquer un numéro valide.</p>
+      </div>
+      <div class="field">
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="f-msg">Votre projet <span aria-hidden="true">*</span></label>
+        <textarea id="f-msg" name="message" rows="4" required></textarea>
+        <p class="field__error" id="err-msg" hidden>Dites-nous en un mot ce dont vous avez besoin.</p>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="currentColor"/></svg>
+        Envoyer ma demande
+      </button>
+      <p class="form__success" id="formSuccess" role="status" hidden>⌁ Demande envoyée ! On vous rappelle sous 48 h.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<a href="https://wa.me/33658428199?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20des%20travaux%20d%27%C3%A9lectricit%C3%A9%20%C3%A0%20Lyon."
+   class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Nous contacter sur WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
+
+<footer class="footer">
+  <p>© 2026 FULGUR Élec — Électricien à Lyon · Électricité générale &amp; BTP. Tous droits réservés.</p>
+  <a href="#top">Remonter ↑</a>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
