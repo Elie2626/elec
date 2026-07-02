@@ -94,18 +94,38 @@ const validate = f => {
 };
 fields.forEach(f => f.input.addEventListener('blur', () => { if (f.input.value) validate(f); }));
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async e => {
   e.preventDefault();
   const allOk = fields.map(validate).every(Boolean);
   if (!allOk) { fields.find(f => !f.check(f.input.value)).input.focus(); return; }
   const btn = form.querySelector('button[type=submit]');
   btn.disabled = true;
   btn.textContent = 'Envoi en cours…';
-  // Pas de backend : simulation d'envoi — brancher ici un service (Formspree, API…)
-  setTimeout(() => {
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/moche.marchand@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        _subject: 'Nouvelle demande de devis — FULGUR Élec',
+        _template: 'table',
+        _captcha: 'false',
+        Nom: document.getElementById('f-name').value.trim(),
+        Téléphone: document.getElementById('f-tel').value.trim(),
+        Email: document.getElementById('f-email').value.trim() || 'non renseigné',
+        Projet: document.getElementById('f-msg').value.trim()
+      })
+    });
+    if (!res.ok) throw new Error('send failed');
     form.reset();
     btn.hidden = true;
     document.getElementById('formSuccess').hidden = false;
-  }, 900);
+  } catch (err) {
+    btn.disabled = false;
+    btn.innerHTML = 'Réessayer l’envoi';
+    const success = document.getElementById('formSuccess');
+    success.hidden = false;
+    success.textContent = 'L’envoi a échoué. Réessayez ou appelez-nous au 06 58 42 81 99.';
+    success.style.color = 'var(--error)';
+  }
 });
 }
