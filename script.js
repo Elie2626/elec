@@ -80,6 +80,7 @@ if (!reducedMotion && canvas) {
 
 /* ---- Formulaire (validation au blur + submit) ---- */
 const form = document.getElementById('quoteForm');
+if (form) {
 const fields = [
   { input: document.getElementById('f-name'), err: document.getElementById('err-name'), check: v => v.trim().length >= 2 },
   { input: document.getElementById('f-tel'), err: document.getElementById('err-tel'), check: v => /^[+\d][\d\s.-]{8,}$/.test(v.trim()) },
@@ -107,3 +108,4 @@ form.addEventListener('submit', e => {
     document.getElementById('formSuccess').hidden = false;
   }, 900);
 });
+}
