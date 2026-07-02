@@ -1,4 +1,4 @@
-/* FULGUR Élec — interactions */
+/* RhoneElec — interactions */
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ---- Menu mobile ---- */
@@ -106,7 +106,7 @@ form.addEventListener('submit', async e => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
-        _subject: 'Nouvelle demande de devis — FULGUR Élec',
+        _subject: 'Nouvelle demande de devis — RhoneElec',
         _template: 'table',
         _captcha: 'false',
         Nom: document.getElementById('f-name').value.trim(),
